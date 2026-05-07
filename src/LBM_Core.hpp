@@ -46,7 +46,7 @@ public:
         double *f_out = field.f_out;
         double inv_tau = 1.0 / tau;
 
-#pragma omp target teams distribute parallel for collapse(3)
+#pragma omp target teams distribute parallel for collapse(3) 
         for (int z = 0; z < nz; z++) {
             for (int y = 0; y < ny; y++) {
                 for (int x = 0; x < nx; x++) {

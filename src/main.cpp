@@ -54,7 +54,7 @@ int main(int argc, char* argv[]) {
         fluid.swap();
         //        thermal.swap();
 
-        if (istep % 200 == 0) {
+        if (istep % 2000 == 0) {
             macro.update(fluid, thermal);
             //macro.write_tecplot(ctx.rank, istep);
             macro.write_binary_vtk(ctx.rank, istep, 0, 0, 0);
